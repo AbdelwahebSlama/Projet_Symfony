@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c5123e-f43a-4c65-8ca4-ab9762b0d1c8" name="Default Changelist" comment="deuxiéme commit partie admin2">
-      <change afterPath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/enseignant/EnseignantController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/etudiant/EtudiantController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Classe.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Ecole.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Enseignant.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Etudiant.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Filiere.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Niveau.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Paiement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Stage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Type.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191202114930.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191202123347.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/AdminRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ClasseRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/EcoleRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/EnseignantRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/EtudiantRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/FiliereRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/NiveauRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/PaiementRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/StageRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/TypeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/enseignant/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/etudiant/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f2c5123e-f43a-4c65-8ca4-ab9762b0d1c8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,6 +209,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -309,7 +281,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -360,6 +331,7 @@
       <workItem from="1575294222934" duration="453000" />
       <workItem from="1575313311026" duration="975000" />
       <workItem from="1575314324282" duration="841000" />
+      <workItem from="1575315300366" duration="242000" />
     </task>
     <task id="LOCAL-00001" summary="deuxiéme commit partie admin">
       <created>1575313757743</created>
@@ -368,19 +340,25 @@
       <option name="project" value="LOCAL" />
       <updated>1575313757743</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Merge remote-tracking branch 'origin/master'">
+      <created>1575315523735</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575315523735</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13115000" />
+    <option name="totallyTimeSpent" value="13357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2685325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -389,10 +367,11 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.22749591" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.22749591" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -426,7 +405,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="deuxiéme commit partie admin" />
     <MESSAGE value="deuxiéme commit partie admin2" />
-    <option name="LAST_COMMIT_MESSAGE" value="deuxiéme commit partie admin2" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -507,7 +487,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../jackson/index.html">
+    <entry file="file://D:/jackson/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
