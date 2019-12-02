@@ -1,136 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c5123e-f43a-4c65-8ca4-ab9762b0d1c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/flexslider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/icomoon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/owl.theme.default.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/sb-admin-2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/sb-admin-2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/sb-admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/sb-admin.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/bootstrap/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/icomoon/icomoon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/icomoon/icomoon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/icomoon/icomoon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/icomoon/icomoon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/about.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/blog-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/blog-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/blog-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/blog-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/cover_bg_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/iimm1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/img-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/img-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/img-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/img-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/img-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/img-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/img_bg_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/img_bg_1100.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/img_bg_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/loc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/google_map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.countTo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.easing.1.3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.flexslider-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.waypoints.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/modernizr-2.6.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/respond.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/sb-admin-charts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/sb-admin-charts.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/sb-admin-datatables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/sb-admin-datatables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/sb-admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/sb-admin.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/chart.js/Chart.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/chart.js/Chart.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/chart.js/Chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/chart.js/Chart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/dataTables.bootstrap4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/dataTables.bootstrap4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/jquery.dataTables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/jquery-easing/jquery.easing.compatibility.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/jquery-easing/jquery.easing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/jquery-easing/jquery.easing.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/Classe/ajoutMatiere.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/Classe/listeMatiere.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/Enseignant/ajoutEnseignant.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/Enseignant/detailEnseingnat.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/Enseignant/listeEnseingnat.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/Etudiant/DetailEtudiant.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/Etudiant/ajoutEtudiant.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/Etudiant/listeEtudiant.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/Matiere/ajoutMatiere.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/Matiere/listeMatiere.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/indexadmin.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/nav.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="f2c5123e-f43a-4c65-8ca4-ab9762b0d1c8" name="Default Changelist" comment="deuxiéme commit partie admin2">
+      <change afterPath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/enseignant/EnseignantController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/etudiant/EtudiantController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Classe.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Ecole.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Enseignant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Etudiant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Filiere.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Niveau.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Paiement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Stage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Type.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191202114930.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191202123347.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/AdminRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ClasseRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/EcoleRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/EnseignantRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/EtudiantRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/FiliereRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/NiveauRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/PaiementRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/StageRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/TypeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/enseignant/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/etudiant/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -161,9 +59,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-              <folding>
-                <element signature="e#43#67#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -171,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/etudiant/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="76" column="19" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="19" />
+            <state relative-caret-position="27">
+              <caret line="77" column="19" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -343,7 +238,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -415,6 +309,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -423,6 +318,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/admin" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -462,20 +358,29 @@
       <workItem from="1575287030545" duration="817000" />
       <workItem from="1575287871320" duration="5450000" />
       <workItem from="1575294222934" duration="453000" />
-      <workItem from="1575313311026" duration="431000" />
+      <workItem from="1575313311026" duration="975000" />
+      <workItem from="1575314324282" duration="841000" />
     </task>
+    <task id="LOCAL-00001" summary="deuxiéme commit partie admin">
+      <created>1575313757743</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575313757743</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11730000" />
+    <option name="totallyTimeSpent" value="13115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -484,9 +389,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3535188" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.22749591" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -520,7 +425,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="deuxiéme commit partie admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="deuxiéme commit partie admin" />
+    <MESSAGE value="deuxiéme commit partie admin2" />
+    <option name="LAST_COMMIT_MESSAGE" value="deuxiéme commit partie admin2" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -657,9 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding>
-            <element signature="e#43#67#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -679,8 +582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/etudiant/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="76" column="19" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="19" />
+        <state relative-caret-position="27">
+          <caret line="77" column="19" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
         </state>
       </provider>
     </entry>
