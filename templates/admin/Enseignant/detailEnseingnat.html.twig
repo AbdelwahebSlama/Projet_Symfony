@@ -7,15 +7,13 @@
                 <h3 class="mb-0">{{ ensg.nom }}</h3>
                 <div class="mb-1 text-muted">{{ ensg.prenom }}</div>
                 <p class="card-text mb-auto">{{ ensg.cin }}</p>
-                <p class="card-text mb-auto">{{ ensg.adress }}</p>
+                <p class="card-text mb-auto">{{ ensg.adresse }}</p>
                 <p class="card-text mb-auto">{{ ensg.email }}</p>
-                <p class="card-text mb-auto">{{ ensg.speciality }}</p>
-                <p class="card-text mb-auto">Prix: {{ ensg.prix }}</p>
-                <p class="card-text mb-auto">Nombre d heure{{ ensg.heure }}</p>
+                <p class="card-text mb-auto">{{ ensg.specialite }}</p>
                 <a href="{{ path('adminListeEnsg') }}" class="stretched-link">Retour</a>
             </div>
             <div class="col-auto d-none d-lg-block">
-                <img src="{{ ensg.img }}"
+                <img src="{{ ensg.image }}"
                      width="150px"
                      height="150px"
                      class="rounded-circle"

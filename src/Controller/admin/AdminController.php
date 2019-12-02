@@ -2,6 +2,9 @@
 
 namespace App\Controller\admin;
 
+use App\Entity\Admin;
+use App\Entity\Enseignant;
+use App\Entity\Etudiant;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -12,7 +15,11 @@ class AdminController extends AbstractController
      */
     public function index()
     {
+        $manager = $this->getDoctrine()->getManager();
+        $admin = $manager->getRepository(Admin::class)->find(2);
+
         return $this->render('admin/indexadmin.html.twig', [
+            "admin" => $admin
 
         ]);
     }
@@ -22,36 +29,40 @@ class AdminController extends AbstractController
      */
     public function listeEnseignant()
     {
+        $repo = $this->getDoctrine()->getRepository(Enseignant::class);
+        $ensg = $repo->findAll();
+
+
 //        $repo = $this->getDoctrine()->getRepository(Enseignant::class);
 //        $ensg = $repo->findAll();
-//
-//
-////        $repo = $this->getDoctrine()->getRepository(Enseignant::class);
-////        $ensg = $repo->findAll();
-        return $this->render('admin/Enseignant/listeEnseingnat.html.twig', array());
+        return $this->render('admin/Enseignant/listeEnseingnat.html.twig', array(
+            "ensg" => $ensg
+        ));
 
     }
-//    /**
-//     * @Route("/detail/{id<\d+>}", name="enseignant.detail")
-//     */
-//    public function detailEnseignat(Enseignant $enseignant = null)
-//    {
-//
-//        return $this->render('admin/Enseignant/detailEnseingnat.html.twig', array(
-//            'ensg'=>$enseignant
-//        ));
-//
-//    }
+
+    /**
+     * @Route("/detail/{id<\d+>}", name="enseignant.detail")
+     */
+    public function detailEnseignat(Enseignant $enseignant = null)
+    {
+
+        return $this->render('admin/Enseignant/detailEnseingnat.html.twig', array(
+            'ensg' => $enseignant
+        ));
+
+    }
+
     /**
      * @Route("/delete/{id<\d+>}", name="enseignant.delete")
      */
     public function deletePersonne(Enseignant $enseignant = null)
     {
-//        if ($enseignant) {
-//            $manager = $this->getDoctrine()->getManager();
-//            $manager->remove($enseignant);
-//            $manager->flush();
-//        }
+        if ($enseignant) {
+            $manager = $this->getDoctrine()->getManager();
+            $manager->remove($enseignant);
+            $manager->flush();
+        }
         return $this->forward('App\Controller\Admin\AdminController::listeEnseignant');
     }
 
@@ -71,34 +82,37 @@ class AdminController extends AbstractController
      */
     public function listeEtudiant()
     {
-//        $repo = $this->getDoctrine()->getRepository(Etudiant::class);
-//        $etud = $repo->findAll();
+        $repo = $this->getDoctrine()->getRepository(Etudiant::class);
+        $etud = $repo->findAll();
 
         return $this->render('admin/Etudiant/listeEtudiant.html.twig', [
+            "etud" => $etud
 
         ]);
     }
+
     /**
      * @Route("/detailEtud/{id<\d+>}", name="etudiant.detail")
      */
-//    public function detailEtudiant(Etudiant $etudiant = null)
-//    {
-//
-//        return $this->render('admin/Etudiant/DetailEtudiant.html.twig', array(
-//            'etud'=>$etudiant
-//        ));
-//
-//    }
+    public function detailEtudiant(Etudiant $etudiant = null)
+    {
+
+        return $this->render('admin/Etudiant/DetailEtudiant.html.twig', array(
+            'etud' => $etudiant
+        ));
+
+    }
+
     /**
      * @Route("/deleteEtud/{id<\d+>}", name="etudiant.delete")
      */
     public function deleteEtudiant(Etudiant $etudiant = null)
     {
-//        if ($etudiant) {
-//            $manager = $this->getDoctrine()->getManager();
-//            $manager->remove($etudiant);
-//            $manager->flush();
-//        }
+        if ($etudiant) {
+            $manager = $this->getDoctrine()->getManager();
+            $manager->remove($etudiant);
+            $manager->flush();
+        }
         return $this->forward('App\Controller\Admin\AdminController::listeEtudiant');
     }
 

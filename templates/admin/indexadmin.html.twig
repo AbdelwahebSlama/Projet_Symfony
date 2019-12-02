@@ -27,7 +27,25 @@
 
 <div class="content-wrapper">
     {% block body %}
-
+        {{ include('/admin/body.html.twig') }}
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">Administratuer</strong>
+                <h3 class="mb-0">{{ admin.nom }}</h3>
+                <div class="mb-1 text-muted">{{ admin.prenom }}</div>
+                <p class="card-text mb-auto">{{ admin.cin }}</p>
+                <p class="card-text mb-auto">{{ admin.adresse }}</p>
+                <p class="card-text mb-auto">{{ admin.email }}</p>
+                <p class="card-text mb-auto">{{ admin.post }}</p>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <img src="{{ admin.image }}"
+                     width="150px"
+                     height="150px"
+                     class="rounded-circle"
+                >
+            </div>
+        </div>
     {% endblock %}
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
