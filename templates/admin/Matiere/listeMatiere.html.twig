@@ -1,0 +1,73 @@
+{% extends 'admin/indexadmin.html.twig' %}
+
+
+
+{% block body %}
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('admin') }}">Matiéres</a>
+        </li>
+        <li class="breadcrumb-item active">Liste des matiéres</li>
+    </ol>
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fa fa-table"></i> La liste
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Libellé</th>
+                        <th>Modifier</th>
+                        <th>Supprimer</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Libellé</th>
+                        <th>Modifier</th>
+                        <th>Supprimer</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    {% for mats in mat %}
+                        <tr>
+
+                            <td>{{ mats.id }}</td>
+                            <td>{{ mats.lib }}</td>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <td><a href="#">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                                                View
+                                            </button>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">delete
+                                            </button>
+                                        </a>
+                                    </td>
+                                </div>
+
+                            </div>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+
+
