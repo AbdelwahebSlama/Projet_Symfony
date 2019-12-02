@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c5123e-f43a-4c65-8ca4-ab9762b0d1c8" name="Default Changelist" comment="Merge remote-tracking branch   kkk 'origin/master'">
-      <change afterPath="$PROJECT_DIR$/templates/admin/body.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sf4Forma.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sf4Forma.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/Enseignant/detailEnseingnat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/Enseignant/detailEnseingnat.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/Enseignant/listeEnseingnat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/Enseignant/listeEnseingnat.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/Etudiant/DetailEtudiant.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/Etudiant/DetailEtudiant.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/Etudiant/listeEtudiant.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/Etudiant/listeEtudiant.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/indexadmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/indexadmin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/nav.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/navbar.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="f2c5123e-f43a-4c65-8ca4-ab9762b0d1c8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,14 +16,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="120" column="25" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="25" />
+            <state relative-caret-position="473">
+              <caret line="126" column="11" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
               <folding>
-                <element signature="e#40#61#0#PHP" expanded="true" />
                 <element signature="e#518#546#0#PHP" expanded="true" />
+                <element signature="e#3174#3214#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,11 +40,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin/nav.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
-              <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+              <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
+              <folding>
+                <element signature="e#2665#2679#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -389,7 +375,7 @@
       <workItem from="1575313311026" duration="975000" />
       <workItem from="1575314324282" duration="841000" />
       <workItem from="1575315300366" duration="1032000" />
-      <workItem from="1575316387655" duration="6996000" />
+      <workItem from="1575316387655" duration="7264000" />
     </task>
     <task id="LOCAL-00001" summary="deuxiéme commit partie admin">
       <created>1575313757743</created>
@@ -412,16 +398,44 @@
       <option name="project" value="LOCAL" />
       <updated>1575315629603</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Merge remote-tracking branch   kkk 'origin/master'">
+      <created>1575323618454</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575323618454</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21143000" />
+    <option name="totallyTimeSpent" value="21411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19440243" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.49924356" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.1898527" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.10474632" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19440243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -442,7 +456,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -678,13 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/nav.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/Etudiant/ajoutEtudiant.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -696,11 +703,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="120" column="25" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="25" />
+        <state relative-caret-position="473">
+          <caret line="126" column="11" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
           <folding>
-            <element signature="e#40#61#0#PHP" expanded="true" />
             <element signature="e#518#546#0#PHP" expanded="true" />
+            <element signature="e#3174#3214#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/nav.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
+          <folding>
+            <element signature="e#2665#2679#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
