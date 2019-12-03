@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c5123e-f43a-4c65-8ca4-ab9762b0d1c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/Enseignant/ajoutEnseignant.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/Enseignant/ajoutEnseignant.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="f2c5123e-f43a-4c65-8ca4-ab9762b0d1c8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,13 +16,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="190" column="5" lean-forward="true" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
+            <state relative-caret-position="230">
+              <caret line="190" column="5" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
               <folding>
-                <element signature="e#40#61#0#PHP" expanded="true" />
                 <element signature="e#2572#2591#0#PHP" expanded="true" />
                 <element signature="e#4624#4641#0#PHP" expanded="true" />
               </folding>
@@ -34,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin/Enseignant/ajoutEnseignant.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
+            <state relative-caret-position="157">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#12#54#0#Twig" expanded="true" />
                 <element signature="e#2523#2551#0#Twig" expanded="true" />
@@ -131,8 +126,8 @@
         <option value="$PROJECT_DIR$/src/DataFixtures/Admin.php" />
         <option value="$PROJECT_DIR$/templates/admin/Etudiant/ajoutEtudiant.html.twig" />
         <option value="$PROJECT_DIR$/config/packages/twig.yaml" />
-        <option value="$PROJECT_DIR$/templates/admin/Enseignant/ajoutEnseignant.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/admin/AdminController.php" />
+        <option value="$PROJECT_DIR$/templates/admin/Enseignant/ajoutEnseignant.html.twig" />
       </list>
     </option>
   </component>
@@ -374,7 +369,7 @@
       <workItem from="1575314324282" duration="841000" />
       <workItem from="1575315300366" duration="1032000" />
       <workItem from="1575316387655" duration="8046000" />
-      <workItem from="1575400161525" duration="6607000" />
+      <workItem from="1575400161525" duration="6856000" />
     </task>
     <task id="LOCAL-00001" summary="deuxiéme commit partie admin">
       <created>1575313757743</created>
@@ -418,17 +413,23 @@
       <option name="project" value="LOCAL" />
       <updated>1575406223608</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Merge remote-tracking branch  ajout des formulaire 'origin/master'">
+      <created>1575408050591</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575408050591</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28800000" />
+    <option name="totallyTimeSpent" value="29049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2655068" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2655068" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -437,13 +438,13 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32890365" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924356" weight="0.32890365" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924356" weight="0.32733223" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.049099836" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.38134205" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.33878887" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.21767594" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -697,17 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/Enseignant/ajoutEnseignant.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
-          <folding>
-            <element signature="e#12#54#0#Twig" expanded="true" />
-            <element signature="e#2523#2551#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/navbar.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
@@ -730,12 +720,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="190" column="5" lean-forward="true" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
+        <state relative-caret-position="230">
+          <caret line="190" column="5" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
           <folding>
-            <element signature="e#40#61#0#PHP" expanded="true" />
             <element signature="e#2572#2591#0#PHP" expanded="true" />
             <element signature="e#4624#4641#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/Enseignant/ajoutEnseignant.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#12#54#0#Twig" expanded="true" />
+            <element signature="e#2523#2551#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
