@@ -27,7 +27,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/listeEnsg", name="adminListeEnsg")
+     * @Route("/admin/listeEnsg", name="adminListeEnsg")
      */
     public function listeEnseignant()
     {
@@ -44,7 +44,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/detail/{id<\d+>}", name="enseignant.detail")
+     * @Route("/admin/detail/{id<\d+>}", name="enseignant.detail")
      */
     public function detailEnseignat(Enseignant $enseignant = null)
     {
@@ -56,7 +56,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/delete/{id<\d+>}", name="enseignant.delete")
+     * @Route("/admin/delete/{id<\d+>}", name="enseignant.delete")
      */
     public function deletePersonne(Enseignant $enseignant = null)
     {
@@ -69,7 +69,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/ajoutEnsg", name="adminAjoutEnsg")
+     * @Route("/admin/ajoutEnsg", name="adminAjoutEnsg")
      */
     public function ajouterEnseignant(Request $request, ObjectManager $manager)
     {
@@ -84,6 +84,14 @@ class AdminController extends AbstractController
             ->add('specialite')
             ->add('CV')
             ->getForm();
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $manager->persist($enseignant);
+            $manager->flush();
+            return $this->redirectToRoute('enseignant.detail', ['id' =>
+                $enseignant->getId()]);
+        }
 
 
         return $this->render('admin/Enseignant/ajoutEnseignant.html.twig', [
@@ -93,7 +101,7 @@ class AdminController extends AbstractController
 
 
     /**
-     * @Route("/listeEtud", name="adminListeEtud")
+     * @Route("/admin/listeEtud", name="adminListeEtud")
      */
     public function listeEtudiant()
     {
@@ -107,7 +115,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/detailEtud/{id<\d+>}", name="etudiant.detail")
+     * @Route("/admin/detailEtud/{id<\d+>}", name="etudiant.detail")
      */
     public function detailEtudiant(Etudiant $etudiant = null)
     {
@@ -119,7 +127,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/deleteEtud/{id<\d+>}", name="etudiant.delete")
+     * @Route("/admin/deleteEtud/{id<\d+>}", name="etudiant.delete")
      */
     public function deleteEtudiant(Etudiant $etudiant = null)
     {
