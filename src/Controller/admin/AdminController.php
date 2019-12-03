@@ -5,7 +5,9 @@ namespace App\Controller\admin;
 use App\Entity\Admin;
 use App\Entity\Enseignant;
 use App\Entity\Etudiant;
+use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class AdminController extends AbstractController
@@ -69,10 +71,23 @@ class AdminController extends AbstractController
     /**
      * @Route("/ajoutEnsg", name="adminAjoutEnsg")
      */
-    public function ajouterEnseignant()
+    public function ajouterEnseignant(Request $request, ObjectManager $manager)
     {
+        $enseignant = new Enseignant();
+        $form = $this->createFormBuilder($enseignant)
+            ->add('cin')
+            ->add('nom')
+            ->add('prenom')
+            ->add('adresse')
+            ->add('email')
+            ->add('image')
+            ->add('specialite')
+            ->add('CV')
+            ->getForm();
+
+
         return $this->render('admin/Enseignant/ajoutEnseignant.html.twig', [
-            'controller_name' => 'AdminController',
+            "formEns" => $form->createView()
         ]);
     }
 
@@ -118,10 +133,27 @@ class AdminController extends AbstractController
 
 
     /**
-     * @Route("/ajoutEtud", name="adminAjoutEtud")
+     * @Route("/admin/ajoutEtud", name="adminAjoutEtud")
      */
-    public function ajouterEtudiant()
+    public function ajouterEtudiant(Request $request, ObjectManager $manager)
     {
+        if ($request->request->count() > 0) {
+            $etudiant = new Etudiant();
+
+            $etudiant->setCin($request->request->get('cin'))
+                ->setNom($request->request->get('nom'))
+                ->setPrenom($request->request->get('prenom'))
+                ->setAdresse($request->request->get('adresse'))
+                ->setEmail($request->request->get('email'))
+                ->setImage($request->request->get('image'))
+                ->setAge($request->request->get('age'));
+            $manager->persist($etudiant);
+            $manager->flush();
+
+            return $this->redirectToRoute("etudiant.detail", ['id' => $etudiant->getId()]);
+
+        }
+
         return $this->render('admin/Etudiant/ajoutEtudiant.html.twig', [
             'controller_name' => 'AdminController',
         ]);

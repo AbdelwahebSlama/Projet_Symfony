@@ -5,25 +5,47 @@
         <div class="card card-register mx-auto mt-5">
             <div class="card-header">Ajouter Etudiant</div>
             <div class="card-body">
-                <form>
+                <form method="post" action="">
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-md-6">
-                                <label for="exampleInputName">First name</label>
-                                <input class="form-control" id="exampleInputName" type="text"
-                                       aria-describedby="nameHelp" placeholder="Enter first name">
+                                <label for="exampleInputName">CIN </label>
+                                <input class="form-control" id="exampleInputName" type="text" name="cin"
+                                       aria-describedby="nameHelp" placeholder="Entrer votre num cin ">
                             </div>
                             <div class="col-md-6">
-                                <label for="exampleInputLastName">Last name</label>
-                                <input class="form-control" id="exampleInputLastName" type="text"
-                                       aria-describedby="nameHelp" placeholder="Enter last name">
+                                <label for="exampleInputName">Nom </label>
+                                <input class="form-control" id="exampleInputName" type="text" name="nom"
+                                       aria-describedby="nameHelp" placeholder="Entrer votre nom">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="exampleInputLastName">Prenom</label>
+                                <input class="form-control" id="exampleInputLastName" type="text" name="prenom"
+                                       aria-describedby="nameHelp" placeholder="Enterer votre nom">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="exampleInputName">Adresse </label>
+                                <input class="form-control" id="exampleInputName" type="text" name="adresse"
+                                       aria-describedby="nameHelp" placeholder="Enterer votre adrersse ">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="exampleInputName">Age </label>
+                                <input class="form-control" id="exampleInputName" type="text" name="age"
+                                       aria-describedby="nameHelp" placeholder="Enterer votre age ">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="exampleInputName">image </label>
+                                <input class="form-control" id="exampleInputName" type="text" name="image"
+                                       aria-describedby="nameHelp" placeholder="Enterer votre image ">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
+                        <label for="exampleInputEmail1">Adresse email</label>
                         <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp"
-                               placeholder="Enter email">
+                               name="email"
+                               placeholder="Entrer votre email">
                     </div>
                     <div class="form-group">
                         <div class="form-row">
@@ -32,14 +54,15 @@
                                 <input class="form-control" id="exampleInputPassword1" type="password"
                                        placeholder="Password">
                             </div>
-                            <div class="col-md-6">
-                                <label for="exampleConfirmPassword">Confirm password</label>
-                                <input class="form-control" id="exampleConfirmPassword" type="password"
-                                       placeholder="Confirm password">
-                            </div>
+                            {#                            <div class="col-md-6">#}
+                            {#                                <label for="exampleConfirmPassword">Confirm password</label>#}
+                            {#                                <input class="form-control" id="exampleConfirmPassword" type="password"#}
+                            {#                                       placeholder="Confirm password">#}
+                            {#                            </div>#}
                         </div>
                     </div>
-                    <a class="btn btn-primary btn-block" href="login.html">Register</a>
+                    {#                    <a class="btn btn-primary btn-block" href="login.html">Register</a>#}
+                    <button type="submit">Enregistrer</button>
                 </form>
 
             </div>
