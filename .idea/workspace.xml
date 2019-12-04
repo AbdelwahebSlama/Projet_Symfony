@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2c5123e-f43a-4c65-8ca4-ab9762b0d1c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/admin/Stage/AjoutStage.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Enseignant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enseignant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/Enseignant/listeEnseingnat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/Enseignant/listeEnseingnat.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/Matiere/ajoutMatiere.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/Filiere/ajoutFiliere.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/Matiere/listeMatiere.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/Filiere/listefiliere.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/Stage/listeStage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/Stage/listeStage.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/nav.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin/Filiere/ajoutFiliere.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+            <state relative-caret-position="238">
+              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
               <folding>
                 <element signature="e#12#48#0#Twig" expanded="true" />
                 <element signature="e#165#184#0#Twig" expanded="true" />
@@ -75,13 +67,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/admin/Filiere/listefiliere.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+            <state relative-caret-position="884">
+              <caret line="52" column="92" selection-start-line="52" selection-start-column="92" selection-end-line="52" selection-end-column="92" />
               <folding>
                 <element signature="e#12#38#0#Twig" expanded="true" />
+                <element signature="e#1754#1774#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -187,8 +180,8 @@
         <option value="$PROJECT_DIR$/src/Controller/admin/AdminfiliereController.php" />
         <option value="$PROJECT_DIR$/templates/admin/nav.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/FiliereType.php" />
-        <option value="$PROJECT_DIR$/templates/admin/Filiere/ajoutFiliere.html.twig" />
         <option value="$PROJECT_DIR$/templates/admin/Filiere/listefiliere.html.twig" />
+        <option value="$PROJECT_DIR$/templates/admin/Filiere/ajoutFiliere.html.twig" />
       </list>
     </option>
   </component>
@@ -449,7 +442,7 @@
       <workItem from="1575470793162" duration="68000" />
       <workItem from="1575473808264" duration="302000" />
       <workItem from="1575474139798" duration="14000" />
-      <workItem from="1575487103325" duration="14615000" />
+      <workItem from="1575487103325" duration="14874000" />
     </task>
     <task id="LOCAL-00001" summary="deuxiéme commit partie admin">
       <created>1575313757743</created>
@@ -521,11 +514,18 @@
       <option name="project" value="LOCAL" />
       <updated>1575496736036</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Ajouter/modifier des stages et des filieres **page admin**">
+      <created>1575501985998</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1575501985998</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53974000" />
+    <option name="totallyTimeSpent" value="54233000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -538,9 +538,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2065053" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2065053" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -551,7 +550,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32890365" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924356" weight="0.32569557" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.49924356" visible="true" weight="0.32569557" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.18494272" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.3289689" />
@@ -594,7 +593,8 @@
     <MESSAGE value="Merge remote-tracking branch   kkk 'origin/master'" />
     <MESSAGE value="Merge remote-tracking branch  ajout des formulaire 'origin/master'" />
     <MESSAGE value="Ajoute des classes et des etudiant **page admin**" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajoute des classes et des etudiant **page admin**" />
+    <MESSAGE value="Ajouter/modifier des stages et des filieres **page admin**" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajouter/modifier des stages et des filieres **page admin**" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -996,17 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/Filiere/ajoutFiliere.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding>
-            <element signature="e#12#48#0#Twig" expanded="true" />
-            <element signature="e#165#184#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Filiere.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
@@ -1016,10 +1005,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/Filiere/listefiliere.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        <state relative-caret-position="884">
+          <caret line="52" column="92" selection-start-line="52" selection-start-column="92" selection-end-line="52" selection-end-column="92" />
           <folding>
             <element signature="e#12#38#0#Twig" expanded="true" />
+            <element signature="e#1754#1774#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/Filiere/ajoutFiliere.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding>
+            <element signature="e#12#48#0#Twig" expanded="true" />
+            <element signature="e#165#184#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
