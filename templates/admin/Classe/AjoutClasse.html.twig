@@ -4,23 +4,23 @@
         <li class="breadcrumb-item">
             <a href="{{ path('admin.liste.classe') }}">Classe</a>
         </li>
-        <li class="breadcrumb-item active">{% if ModifClas %}Modifier l'Enseignant
-            {% else %}  Ajouter enseiggnant
+        <li class="breadcrumb-item active">{% if ModifClas %}Modifier Classe
+            {% else %}  Ajouter Classe
             {% endif %}
         </li>
     </ol>
     <div class="container">
         <div class="card card-register mx-auto mt-5">
-            <div class="card-header">{% if ModifClas %}Modifier l'Classe
+            <div class="card-header">{% if ModifClas %}Modifier Classe
                 {% else %}  Ajouter Classe
                 {% endif %}</div>
             <div class="card-body">
                 {% form_theme formcl 'bootstrap_4_layout.html.twig' %}
                 {{ form_start(formcl) }}
-                {{ form_row( formcl.nom, {'attr': {'placeholder': "Entrer le cin"}}) }}
-                {{ form_row( formcl.Niveau,{'attr': {'placeholder': "Entrer le nom"}}) }}
+                {{ form_row( formcl.nom, {'attr': {'placeholder': "Entrer le nom de la classe"}}) }}
+                {{ form_row( formcl.Niveau) }}
                 <button type="submit" class="btn btn-success">
-                    {% if ModifClas %}Modifier l'Classe
+                    {% if ModifClas %}Modifier le Classe
                     {% else %}   Ajouter Classe
                     {% endif %}
                 </button>
