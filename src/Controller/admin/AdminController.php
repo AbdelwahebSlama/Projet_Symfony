@@ -5,6 +5,7 @@ namespace App\Controller\admin;
 use App\Entity\Admin;
 use App\Entity\Enseignant;
 use App\Entity\Etudiant;
+use App\Form\EnseignantType;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -70,32 +71,25 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/admin/ajoutEnsg", name="adminAjoutEnsg")
+     * @Route("/admin/{id}/ModifEns", name="adminModifiEnsg")
      */
-    public function ajouterEnseignant(Request $request, ObjectManager $manager)
+    public function ajouterEnseignant(Enseignant $enseignant = null, Request $request, ObjectManager $manager)
     {
-        $enseignant = new Enseignant();
-        $form = $this->createFormBuilder($enseignant)
-            ->add('cin')
-            ->add('nom')
-            ->add('prenom')
-            ->add('adresse')
-            ->add('email')
-            ->add('image')
-            ->add('specialite')
-            ->add('CV')
-            ->getForm();
+        if (!$enseignant) {
+            $enseignant = new Enseignant();
+        }
+
+        $form = $this->createForm(EnseignantType::class, $enseignant);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-
             $manager->persist($enseignant);
             $manager->flush();
             return $this->redirectToRoute('enseignant.detail', ['id' =>
                 $enseignant->getId()]);
         }
-
-
         return $this->render('admin/Enseignant/ajoutEnseignant.html.twig', [
-            "formEns" => $form->createView()
+            "formEns" => $form->createView(),
+            "modifEns" => $enseignant->getId() !== null
         ]);
     }
 

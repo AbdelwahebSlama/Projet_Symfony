@@ -5,11 +5,16 @@
         <li class="breadcrumb-item">
             <a href="{{ path('admin') }}">Enseignant</a>
         </li>
-        <li class="breadcrumb-item active">Ajouter un enseignant</li>
+        <li class="breadcrumb-item active">{% if modifEns %}Modifier l'Enseignant
+            {% else %}  Ajouter enseiggnant
+            {% endif %}
+        </li>
     </ol>
     <div class="container">
         <div class="card card-register mx-auto mt-5">
-            <div class="card-header">Ajouter Enseignant</div>
+            <div class="card-header">{% if modifEns %}Modifier l'Enseignant
+                {% else %}  Ajouter enseiggnant
+                {% endif %}</div>
             <div class="card-body">
                 {% form_theme formEns 'bootstrap_4_layout.html.twig' %}
 
@@ -23,8 +28,13 @@
                 {{ form_row( formEns.image, {'attr': {'placeholder': "Entrer le image"}}) }}
                 {{ form_row( formEns.specialite , {'attr': {'placeholder': "Entrer le specialite "}}) }}
                 {{ form_row( formEns.CV ,{'attr': {'placeholder': "Entrer le Cv"}}) }}
+                {{ form_row( formEns.Ecole) }}
 
-                <button type="submit" class="btn btn-success">Ajouter enseiggnant</button>
+                <button type="submit" class="btn btn-success">
+                    {% if modifEns %}Modifier l'Enseignant
+                    {% else %}   Ajouter enseiggnant
+                    {% endif %}
+                </button>
 
                 {{ form_end(formEns) }}
             </div>

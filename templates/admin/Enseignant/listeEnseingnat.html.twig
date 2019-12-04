@@ -11,7 +11,7 @@
     </ol>
     <div class="card mb-3">
         <div class="card-header">
-            <i class="fa fa-table"></i> La liste
+            <i class="fa fa-table"> La liste</i>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -22,7 +22,8 @@
                         <th>Nom</th>
                         <th>Prénom</th>
                         <th>Specialité</th>
-                        <th>Modifier</th>
+                        <th>Editer</th>
+                        <th>modifier</th>
                         <th>Supprimer</th>
                     </tr>
                     </thead>
@@ -32,35 +33,43 @@
                         <th>Nom</th>
                         <th>Prénom</th>
                         <th>Specialité</th>
-                        <th>Modifier</th>
+                        <th>Editer</th>
+                        <th>modifier</th>
                         <th>Supprimer</th>
                     </tr>
                     </tfoot>
                     <tbody>
                     {% for en in ensg %}
-                    <tr>
+                        <tr>
 
-                        <td>{{ en.cin }}</td>
-                        <td>{{ en.nom }}</td>
-                        <td>{{ en.prenom }}</td>
-                        <td>{{ en.specialite }}</td>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <td><a href="{{ path('enseignant.detail', {id: en.id}) }}">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary -pencil ">
-                                            View
-                                        </button>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="{{ path('enseignant.delete', {id: en.id}) }}">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">delete</button>
-                                    </a>
-                                </td>
+                            <td>{{ en.cin }}</td>
+                            <td>{{ en.nom }}</td>
+                            <td>{{ en.prenom }}</td>
+                            <td>{{ en.specialite }}</td>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <td><a href="{{ path('enseignant.detail', {id: en.id}) }}">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary -pencil ">
+                                                View
+                                            </button>
+                                        </a>
+                                    </td>
+                                    <td><a href="{{ path('adminModifiEnsg', {id: en.id}) }}">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary -pencil ">
+                                                Modif
+                                            </button>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="{{ path('enseignant.delete', {id: en.id}) }}">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">delete
+                                            </button>
+                                        </a>
+                                    </td>
+                                </div>
+
                             </div>
-
-                        </div>
-                    </tr>
+                        </tr>
                     {% endfor %}
 
 
