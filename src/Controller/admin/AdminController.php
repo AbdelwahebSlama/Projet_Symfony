@@ -167,10 +167,10 @@ class AdminController extends AbstractController
      */
     public function listeMatiere()
     {
-//        $repo = $this->getDoctrine()->getRepository(Matiere::class);
+//        $repo = $this->getDoctrine()->getRepository(Filiere::class);
 //        $matiere = $repo->findAll();
 
-        return $this->render('admin/Matiere/listeMatiere.html.twig', [
+        return $this->render('admin/Matiere/listefiliere.html.twig', [
 
         ]);
     }
@@ -180,7 +180,7 @@ class AdminController extends AbstractController
      */
     public function ajouterMatiere()
     {
-        return $this->render('admin/Matiere/ajoutMatiere.html.twig', [
+        return $this->render('admin/Matiere/ajoutFiliere.html.twig', [
             'controller_name' => 'AdminController',
         ]);
     }

@@ -1,0 +1,32 @@
+{% extends 'admin/Filiere/listefiliere.html.twig' %}
+{% block body %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('admin.liste.filiere') }}">Filiere</a>
+        </li>
+        <li class="breadcrumb-item active">{% if Modifiel %}Modifier Filiere
+            {% else %}  Ajouter Filiere
+            {% endif %}
+        </li>
+    </ol>
+    <div class="container">
+        <div class="card card-register mx-auto mt-5">
+            <div class="card-header">{% if Modifiel %}Modifier Filiere
+                {% else %}  Ajouter Fileiere
+                {% endif %}</div>
+            <div class="card-body">
+                {% form_theme formfiel 'bootstrap_4_layout.html.twig' %}
+                {{ form_start(formfiel) }}
+                {{ form_row( formfiel.nom, {'attr': {'placeholder': "Entrer le nom de la filiere"}}) }}
+                {{ form_row( formfiel.Niveau) }}
+                {{ form_row( formfiel.Ecole) }}
+                <button type="submit" class="btn btn-success">
+                    {% if Modifiel %}Modifier le Filiere
+                    {% else %}   Ajouter Filiere
+                    {% endif %}
+                </button>
+                {{ form_end(formfiel) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

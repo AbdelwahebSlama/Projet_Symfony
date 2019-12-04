@@ -1,14 +1,11 @@
 {% extends 'admin/indexadmin.html.twig' %}
 
 {% block body %}
-
-    {% body %}
-    block
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="{{ path('admin') }}">Enseignant</a>
+            <a href="{{ path('admin') }}">Stages</a>
         </li>
-        <li class="breadcrumb-item active">Liste des enseignans</li>
+        <li class="breadcrumb-item active">Liste des Stages</li>
     </ol>
     <div class="card mb-3">
         <div class="card-header">
@@ -19,51 +16,40 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
-                        <th>Cin</th>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Specialité</th>
-                        <th>Editer</th>
-                        <th>modifier</th>
-                        <th>Supprimer</th>
+                        <th>Id</th>
+                        <th>Description</th>
+                        <th>Sujet</th>
+                        <th>Encadré par</th>
+                        <th>type</th>
+                        <th>Modifier</th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
-                        <th>Cin</th>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Specialité</th>
-                        <th>Editer</th>
-                        <th>modifier</th>
-                        <th>Supprimer</th>
+                        <th>Id</th>
+                        <th>Description</th>
+                        <th>Sujet</th>
+                        <th>Encadré par</th>
+                        <th>type</th>
+                        <th>Modifier</th>
                     </tr>
                     </tfoot>
                     <tbody>
-                    {% for en in ensg %}
+                    {% for stage in stages %}
                         <tr>
 
-                            <td>{{ en.cin }}</td>
-                            <td>{{ en.nom }}</td>
-                            <td>{{ en.prenom }}</td>
-                            <td>{{ en.specialite }}</td>
+                            <td>{{ stage.id }}</td>
+                            <td>{{ stage.description }}</td>
+                            <td>{{ stage.sujet }}</td>
+                            <td>{{ stage.enseignant.nom }}</td>
+                            <td>{{ stage.type.nom }}</td>
+
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <td><a href="{{ path('enseignant.detail', {id: en.id}) }}">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary -pencil ">
-                                                View
-                                            </button>
-                                        </a>
-                                    </td>
-                                    <td><a href="{{ path('adminModifiEnsg', {id: en.id}) }}">
+
+                                    <td><a href="{{ path('admin.modif.stage', {id: stage.id}) }}">
                                             <button type="button" class="btn btn-sm btn-outline-secondary -pencil ">
                                                 Modif
-                                            </button>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a href="{{ path('enseignant.delete', {id: en.id}) }}">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">delete
                                             </button>
                                         </a>
                                     </td>
@@ -84,4 +70,3 @@
 {% endblock %}
 
 
-{% endblock %}

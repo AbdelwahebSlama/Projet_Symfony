@@ -6,9 +6,9 @@
 
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="{{ path('admin') }}">Matiéres</a>
+            <a href="{{ path('admin') }}">Filiere</a>
         </li>
-        <li class="breadcrumb-item active">Liste des matiéres</li>
+        <li class="breadcrumb-item active">Liste des Filiere</li>
     </ol>
     <div class="card mb-3">
         <div class="card-header">
@@ -20,37 +20,38 @@
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Libellé</th>
+                        <th>Nom</th>
+                        <th>Ecole</th>
+                        <th>nb Nivevau</th>
                         <th>Modifier</th>
-                        <th>Supprimer</th>
+
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
                         <th>ID</th>
-                        <th>Libellé</th>
+                        <th>Nom</th>
+                        <th>Ecole</th>
+                        <th>Nivevau</th>
                         <th>Modifier</th>
-                        <th>Supprimer</th>
+
                     </tr>
                     </tfoot>
                     <tbody>
-                    {% for mats in mat %}
+                    {% for fiel in fiels %}
                         <tr>
 
-                            <td>{{ mats.id }}</td>
-                            <td>{{ mats.lib }}</td>
+                            <td>{{ fiel.id }}</td>
+                            <td>{{ fiel.nom }}</td>
+                            <td>{{ fiel.ecole.nom }}</td>
+                            <td>{{ fiel.niveau.count }}</td>
 
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <td><a href="#">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">
-                                                View
-                                            </button>
-                                        </a>
-                                    </td>
+
                                     <td>
-                                        <a href="#">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">delete
+                                        <a href="{{ path('admin.modif.fileiere',{id: fiel.id}) }}">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Modify
                                             </button>
                                         </a>
                                     </td>

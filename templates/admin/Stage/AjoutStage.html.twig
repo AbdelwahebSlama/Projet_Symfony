@@ -1,0 +1,33 @@
+{% extends 'admin/Stage/listeStage.html.twig' %}
+{% block body %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('admin.liste.stage') }}">Stage</a>
+        </li>
+        <li class="breadcrumb-item active">{% if ModifStg %}Modifier Stage
+            {% else %}  Ajouter Stage
+            {% endif %}
+        </li>
+    </ol>
+    <div class="container">
+        <div class="card card-register mx-auto mt-5">
+            <div class="card-header">{% if ModifStg %}Modifier Stage
+                {% else %}  Ajouter Stage
+                {% endif %}</div>
+            <div class="card-body">
+                {% form_theme formStg 'bootstrap_4_layout.html.twig' %}
+                {{ form_start(formStg) }}
+                {{ form_row( formStg.description, {'attr': {'placeholder': "Entrer la description de stage"}}) }}
+                {{ form_row( formStg.sujet, {'attr': {'placeholder': "Entrer le sujet"}}) }}
+                {{ form_row( formStg.Enseignant) }}
+                {{ form_row( formStg.Type) }}
+                <button type="submit" class="btn btn-success">
+                    {% if ModifStg %}Modifier l'Stage
+                    {% else %}   Ajouter Stage
+                    {% endif %}
+                </button>
+                {{ form_end(formStg) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
