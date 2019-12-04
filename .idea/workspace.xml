@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c5123e-f43a-4c65-8ca4-ab9762b0d1c8" name="Default Changelist" comment="Merge remote-tracking branch  ajout des formulaire 'origin/master'">
-      <change afterPath="$PROJECT_DIR$/templates/etudiant/coordonnées.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/etudiant/EtudiantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/etudiant/EtudiantController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ecole.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ecole.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/Enseignant/ajoutEnseignant.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/Enseignant/ajoutEnseignant.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/Enseignant/listeEnseingnat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/Enseignant/listeEnseingnat.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/etudiant/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/etudiant/profile_etudiant.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="f2c5123e-f43a-4c65-8ca4-ab9762b0d1c8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/etudiant/EtudiantController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
+            <state relative-caret-position="391">
               <caret line="25" column="62" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="62" />
-              <folding>
-                <element signature="e#483#520#0#PHP" expanded="true" />
-                <element signature="e#843#875#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -41,14 +28,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/etudiant/profile_etudiant.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="72" column="112" selection-start-line="72" selection-start-column="112" selection-end-line="72" selection-end-column="112" />
+            <state relative-caret-position="120">
+              <caret line="74" column="112" selection-start-line="74" selection-start-column="112" selection-end-line="74" selection-end-column="112" />
               <folding>
-                <element signature="e#2648#2667#0#Twig" expanded="true" />
-                <element signature="e#3002#3021#0#Twig" expanded="true" />
-                <element signature="e#3423#3442#0#Twig" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#3465#3484#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -66,13 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/etudiant/coordonnées.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#3345#3364#0#Twig" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="1292">
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
         </entry>
@@ -258,6 +236,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -323,7 +302,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,6 +357,7 @@
       <workItem from="1575316387655" duration="8046000" />
       <workItem from="1575400161525" duration="10879000" />
       <workItem from="1575444512121" duration="5903000" />
+      <workItem from="1575470793162" duration="68000" />
     </task>
     <task id="LOCAL-00001" summary="deuxiéme commit partie admin">
       <created>1575313757743</created>
@@ -429,11 +408,18 @@
       <option name="project" value="LOCAL" />
       <updated>1575408050591</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Merge remote-tracking branch  ajout des formulaire 'origin/master'">
+      <created>1575470839390</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575470839390</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38975000" />
+    <option name="totallyTimeSpent" value="39043000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -447,7 +433,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2344932" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23827533" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -460,7 +446,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924356" weight="0.32569557" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.2569558" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.20621932" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.3289689" />
       <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.049833886" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -571,7 +557,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../jackson/index.html">
+    <entry file="file://D:/jackson/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
@@ -762,24 +748,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/etudiant/EtudiantController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
+        <state relative-caret-position="391">
           <caret line="25" column="62" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="62" />
-          <folding>
-            <element signature="e#483#520#0#PHP" expanded="true" />
-            <element signature="e#843#875#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/etudiant/coordonnées.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3345#3364#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,16 +760,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/etudiant/coordonnées.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/etudiant/profile_etudiant.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="72" column="112" selection-start-line="72" selection-start-column="112" selection-end-line="72" selection-end-column="112" />
+        <state relative-caret-position="120">
+          <caret line="74" column="112" selection-start-line="74" selection-start-column="112" selection-end-line="74" selection-end-column="112" />
           <folding>
-            <element signature="e#2648#2667#0#Twig" expanded="true" />
-            <element signature="e#3002#3021#0#Twig" expanded="true" />
-            <element signature="e#3423#3442#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3465#3484#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
