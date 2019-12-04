@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\EnseignantRepository")
@@ -20,16 +21,20 @@ class Enseignant
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Length(min=8, max=8, minMessage="Le numéro de cin doit être composer de 8 entier!")
+     * @Assert\Positive
      */
     private $cin;
 
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\Length(min=4, max=30)
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\Length(min=4, max=30)
      */
     private $prenom;
 
@@ -40,11 +45,15 @@ class Enseignant
 
     /**
      * @ORM\Column(type="string", length=50, nullable=true)
+     * * @Assert\Email(
+     *     message = "The email '{{ value }}' is not a valid email."
+     * )
      */
     private $email;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Assert\Url()
      */
     private $image;
 

@@ -12,7 +12,7 @@
     </ol>
     <div class="card mb-3">
         <div class="card-header">
-            <i class="fa fa-table"></i> La liste
+            <i class="fa fa-table"> La liste</i>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -23,8 +23,10 @@
                         <th>Nom</th>
                         <th>Prénom</th>
                         <th>Age</th>
-                        <th>Modifier</th>
+                        <th>Editer</th>
+                        <th>modifier</th>
                         <th>Supprimer</th>
+                        >
                     </tr>
                     </thead>
                     <tfoot>
@@ -33,7 +35,8 @@
                         <th>Nom</th>
                         <th>Prénom</th>
                         <th>Age</th>
-                        <th>Modifier</th>
+                        <th>Editer</th>
+                        <th>modifier</th>
                         <th>Supprimer</th>
                     </tr>
                     </tfoot>
@@ -50,6 +53,12 @@
                                     <td><a href="{{ path('etudiant.detail', {id: et.id}) }}">
                                             <button type="button" class="btn btn-sm btn-outline-secondary">
                                                 View
+                                            </button>
+                                        </a>
+                                    </td>
+                                    <td><a href="{{ path('adminModifiEtud', {id: et.id}) }}">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary -pencil ">
+                                                Modif
                                             </button>
                                         </a>
                                     </td>

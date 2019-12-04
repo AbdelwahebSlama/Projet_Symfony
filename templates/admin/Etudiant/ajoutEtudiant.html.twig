@@ -1,71 +1,46 @@
 {% extends 'admin/Etudiant/listeEtudiant.html.twig' %}
 {% block body %}
 
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('adminListeEtud') }}">Etudiant</a>
+        </li>
+        <li class="breadcrumb-item active">{% if modifEtud %}Modifier l'Etudiant
+            {% else %}  Ajouter Etudiant
+            {% endif %}
+        </li>
+    </ol>
     <div class="container">
         <div class="card card-register mx-auto mt-5">
-            <div class="card-header">Ajouter Etudiant</div>
+            <div class="card-header">{% if modifEtud %}Modifier l'Etudiant
+                {% else %}  Ajouter Etudiant
+                {% endif %}</div>
             <div class="card-body">
-                <form method="post" action="">
-                    <div class="form-group">
-                        <div class="form-row">
-                            <div class="col-md-6">
-                                <label for="exampleInputName">CIN </label>
-                                <input class="form-control" id="exampleInputName" type="text" name="cin"
-                                       aria-describedby="nameHelp" placeholder="Entrer votre num cin ">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="exampleInputName">Nom </label>
-                                <input class="form-control" id="exampleInputName" type="text" name="nom"
-                                       aria-describedby="nameHelp" placeholder="Entrer votre nom">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="exampleInputLastName">Prenom</label>
-                                <input class="form-control" id="exampleInputLastName" type="text" name="prenom"
-                                       aria-describedby="nameHelp" placeholder="Enterer votre nom">
-                            </div>
+                {% form_theme formEtud 'bootstrap_4_layout.html.twig' %}
 
-                            <div class="col-md-6">
-                                <label for="exampleInputName">Adresse </label>
-                                <input class="form-control" id="exampleInputName" type="text" name="adresse"
-                                       aria-describedby="nameHelp" placeholder="Enterer votre adrersse ">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="exampleInputName">Age </label>
-                                <input class="form-control" id="exampleInputName" type="text" name="age"
-                                       aria-describedby="nameHelp" placeholder="Enterer votre age ">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="exampleInputName">image </label>
-                                <input class="form-control" id="exampleInputName" type="text" name="image"
-                                       aria-describedby="nameHelp" placeholder="Enterer votre image ">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Adresse email</label>
-                        <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp"
-                               name="email"
-                               placeholder="Entrer votre email">
-                    </div>
-                    <div class="form-group">
-                        <div class="form-row">
-                            <div class="col-md-6">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input class="form-control" id="exampleInputPassword1" type="password"
-                                       placeholder="Password">
-                            </div>
-                            {#                            <div class="col-md-6">#}
-                            {#                                <label for="exampleConfirmPassword">Confirm password</label>#}
-                            {#                                <input class="form-control" id="exampleConfirmPassword" type="password"#}
-                            {#                                       placeholder="Confirm password">#}
-                            {#                            </div>#}
-                        </div>
-                    </div>
-                    {#                    <a class="btn btn-primary btn-block" href="login.html">Register</a>#}
-                    <button type="submit">Enregistrer</button>
-                </form>
+                {{ form_start(formEtud) }}
 
+                {{ form_row( formEtud.cin, {'attr': {'placeholder': "Entrer le cin"}}) }}
+                {{ form_row( formEtud.nom,{'attr': {'placeholder': "Entrer le nom"}}) }}
+                {{ form_row( formEtud.prenom, {'attr': {'placeholder': "Entrer le prenom"}}) }}
+                {{ form_row( formEtud.adresse, {'attr': {'placeholder': "Entrer le adress"}}) }}
+                {{ form_row( formEtud.email, {'attr': {'placeholder': "Entrer le email"}}) }}
+                {{ form_row( formEtud.image, {'attr': {'placeholder': "Entrer le image"}}) }}
+                {{ form_row( formEtud.age, {'attr': {'placeholder': "Entrer l'age de l'etudiant"}}) }}
+                {{ form_row( formEtud.Ecole) }}
+                {{ form_row( formEtud.Classe) }}
+                {{ form_row( formEtud.Stage) }}
+
+                <button type="submit" class="btn btn-success">
+                    {% if modifEtud %}Modifier l'Etudiant
+                    {% else %}   Ajouter Etudiant
+                    {% endif %}
+                </button>
+
+                {{ form_end(formEtud) }}
             </div>
         </div>
     </div>
+
+
 {% endblock %}

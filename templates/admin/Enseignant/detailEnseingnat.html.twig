@@ -4,12 +4,15 @@
         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
                 <strong class="d-inline-block mb-2 text-primary">Enseignant</strong>
-                <h3 class="mb-0">{{ ensg.nom }}</h3>
-                <div class="mb-1 text-muted">{{ ensg.prenom }}</div>
-                <p class="card-text mb-auto">{{ ensg.cin }}</p>
-                <p class="card-text mb-auto">{{ ensg.adresse }}</p>
-                <p class="card-text mb-auto">{{ ensg.email }}</p>
-                <p class="card-text mb-auto">{{ ensg.specialite }}</p>
+                <h3 class="mb-0">Nom: {{ ensg.nom }}</h3>
+                <div class="mb-1 text-muted">Prenom: {{ ensg.prenom }}</div>
+                <p class="card-text mb-auto">Numéro de la carte d'itendité{{ ensg.cin }}</p>
+                <p class="card-text mb-auto">Adresse: {{ ensg.adresse }}</p>
+                <p class="card-text mb-auto">Email: {{ ensg.email }}</p>
+                <p class="card-text mb-auto">Son spécialité{{ ensg.specialite }}</p>
+                <p class="card-text mb-auto">Enseigner dans l'ecole: {{ ensg.ecole.nom }}</p>
+
+                <p class="card-text mb-auto">Il encadre {{ ensg.stage.count }} stage</p>
                 <a href="{{ path('adminListeEnsg') }}" class="stretched-link">Retour</a>
             </div>
             <div class="col-auto d-none d-lg-block">

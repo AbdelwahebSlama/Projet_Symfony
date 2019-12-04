@@ -29,11 +29,14 @@
                         <a href="{{ path('adminListeEtud') }}">Liste des etudiants</a>
                     </li>
                     <li>
-                        <a href="#">Liste des classe</a>
+                        <a href="{{ path('admin.liste.classe') }}">Liste des classe</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('admin.liste.stage') }}">Liste des Stages</a>
                     </li>
 
                     <li>
-                        <a href="{{ path('adminListeMat') }}">Liste des matiére</a>
+                        <a href="#">Liste des matiére</a>
                     </li>
 
                 </ul>
@@ -53,7 +56,7 @@
                         <a href="{{ path('adminAjoutEtud') }}">Ajouter Etudiant</a>
                     </li>
                     <li>
-                        <a href="#">Ajouter Classe</a>
+                        <a href="{{ path('admin.classe.ajout') }}">Ajouter Classe</a>
                     </li>
                     <li>
                         <a href="#">Ajouter Stage</a>
