@@ -51,6 +51,11 @@ class Admin
      */
     private $post;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $motpasse;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -136,6 +141,18 @@ class Admin
     public function setPost(string $post): self
     {
         $this->post = $post;
+
+        return $this;
+    }
+
+    public function getMotpasse(): ?string
+    {
+        return $this->motpasse;
+    }
+
+    public function setMotpasse(string $motpasse): self
+    {
+        $this->motpasse = $motpasse;
 
         return $this;
     }

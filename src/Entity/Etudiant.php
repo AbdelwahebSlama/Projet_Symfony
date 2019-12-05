@@ -66,6 +66,11 @@ class Etudiant
      */
     private $Stage;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $motpasse;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -195,5 +200,17 @@ class Etudiant
     {
         return $this->nom;
         // TODO: Implement __toString() method.
+    }
+
+    public function getMotpasse(): ?string
+    {
+        return $this->motpasse;
+    }
+
+    public function setMotpasse(string $motpasse): self
+    {
+        $this->motpasse = $motpasse;
+
+        return $this;
     }
 }

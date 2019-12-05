@@ -77,6 +77,11 @@ class Enseignant
      */
     private $Stage;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $motpasse;
+
     public function __construct()
     {
         $this->Stage = new ArrayCollection();
@@ -230,5 +235,17 @@ class Enseignant
     {
         return $this->nom;
         // TODO: Implement __toString() method.
+    }
+
+    public function getMotpasse(): ?string
+    {
+        return $this->motpasse;
+    }
+
+    public function setMotpasse(string $motpasse): self
+    {
+        $this->motpasse = $motpasse;
+
+        return $this;
     }
 }
