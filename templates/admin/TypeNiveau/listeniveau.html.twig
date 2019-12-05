@@ -1,0 +1,63 @@
+{% extends 'admin/indexadmin.html.twig' %}
+
+
+
+{% block body %}
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('admin') }}">niveaux de filiere</a>
+        </li>
+        <li class="breadcrumb-item active">Liste des niveaux</li>
+    </ol>
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fa fa-table"> La liste</i>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Montant</th>
+                        <th>modifier</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Montant</th>
+                        <th>modifier</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    {% for niv in niveau %}
+                        <tr>
+
+                            <td>{{ niv.id }}</td>
+                            <td>{{ niv.nom }}</td>
+                            <td> {{ niv.paiement.montant }}</td>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <td><a href="{{ path('admin.modif.niveau', {id: niv.id}) }}">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary -pencil ">
+                                                Modif
+                                            </button>
+                                        </a>
+                                    </td>
+                                </div>
+                            </div>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+

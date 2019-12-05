@@ -1,0 +1,61 @@
+{% extends 'admin/indexadmin.html.twig' %}
+
+
+
+{% block body %}
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('admin') }}">Type de stage</a>
+        </li>
+        <li class="breadcrumb-item active">Liste de différents types</li>
+    </ol>
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fa fa-table"> La liste</i>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>modifier</th>
+
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>modifier</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    {% for type in types %}
+                        <tr>
+
+                            <td>{{ type.id }}</td>
+                            <td>{{ type.nom }}</td>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <td><a href="{{ path('admin.modif.type', {id: type.id}) }}">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary -pencil ">
+                                                Modif
+                                            </button>
+                                        </a>
+                                    </td>
+                                </div>
+                            </div>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+

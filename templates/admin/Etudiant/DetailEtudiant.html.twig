@@ -14,6 +14,7 @@
                 <p class="card-text mb-auto">Classe: {{ etud.classe.nom }} Niveau: {{ etud.classe.niveau.nom }}</p>
                 <p class="card-text mb-auto">Afecter à un stage: {{ etud.stage.description }} de
                     type: {{ etud.stage.type.nom }}</p>
+                <p class="card-text mb-auto">Encadrer par: {{ etud.stage.enseignant.nom }}</p>
 
                 <a href="{{ path('adminListeEtud') }}" class="stretched-link">Retour</a>
             </div>

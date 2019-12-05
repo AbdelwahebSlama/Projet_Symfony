@@ -80,4 +80,10 @@ class Paiement
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return (string)$this->montant;
+        // TODO: Implement __toString() method.
+    }
 }

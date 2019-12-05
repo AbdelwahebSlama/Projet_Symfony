@@ -175,15 +175,5 @@ class AdminController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/ajoutMat", name="adminAjoutMat")
-     */
-    public function ajouterMatiere()
-    {
-        return $this->render('admin/Matiere/ajoutFiliere.html.twig', [
-            'controller_name' => 'AdminController',
-        ]);
-    }
-
 
 }

@@ -1,0 +1,33 @@
+{% extends 'admin/TypeNiveau/listetype.html.twig' %}
+
+
+{% block body %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('admin.type.liste') }}">Type</a>
+        </li>
+        <li class="breadcrumb-item active">{% if Modiftype %}Modifier Type
+            {% else %}  Ajouter Type
+            {% endif %}
+        </li>
+    </ol>
+    <div class="container">
+        <div class="card card-register mx-auto mt-5">
+            <div class="card-header">{% if Modiftype %}Modifier Type
+                {% else %}  Ajouter Stage
+                {% endif %}</div>
+            <div class="card-body">
+                {% form_theme formTy 'bootstrap_4_layout.html.twig' %}
+                {{ form_start(formTy) }}
+                {{ form_row( formTy.nom, {'attr': {'placeholder': "Entrer le type de stage"}}) }}
+
+                <button type="submit" class="btn btn-success">
+                    {% if Modiftype %}Modifier Type
+                    {% else %}   Ajouter Type
+                    {% endif %}
+                </button>
+                {{ form_end(formTy) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

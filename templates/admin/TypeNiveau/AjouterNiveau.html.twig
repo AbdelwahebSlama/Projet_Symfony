@@ -1,0 +1,35 @@
+{% extends 'admin/TypeNiveau/listeniveau.html.twig' %}
+
+
+{% block body %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ path('admin.liste.niveau') }}">Niveau</a>
+        </li>
+        <li class="breadcrumb-item active">{% if Modif %}Modifier Niveau
+            {% else %}  Ajouter Niveau
+            {% endif %}
+        </li>
+    </ol>
+    <div class="container">
+        <div class="card card-register mx-auto mt-5">
+            <div class="card-header">{% if Modif %}Modifier Niveau
+                {% else %}  Ajouter Niveau
+                {% endif %}</div>
+            <div class="card-body">
+                {% form_theme form 'bootstrap_4_layout.html.twig' %}
+                {{ form_start(form) }}
+                {{ form_row( form.nom, {'attr': {'placeholder': "Entrer le niveau"}}) }}
+                {{ form_row( form.Paiement) }}
+                {{ form_row( form.Filiere) }}
+
+                <button type="submit" class="btn btn-success">
+                    {% if Modif %}Modifier Niveau
+                    {% else %}   Ajouter Niveau
+                    {% endif %}
+                </button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
