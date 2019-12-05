@@ -18,21 +18,26 @@ class Etudiant
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Length(min=8, max=8, minMessage="Le numéro de cin doit être composer de 8 entier!")
+     * @Assert\Positive
      */
     private $cin;
 
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\Length(min=4, max=30)
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\Length(min=4, max=30)
      */
     private $prenom;
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\Length(min=4, max=30)
      */
     private $adresse;
 
@@ -43,11 +48,15 @@ class Etudiant
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * * @Assert\Email(
+     *     message = "The email '{{ value }}' is not a valid email."
+     * )
      */
     private $image;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Length(min=2, max=2)
      */
     private $age;
 

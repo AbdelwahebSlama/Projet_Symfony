@@ -40,6 +40,7 @@ class Enseignant
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\Length(min=4, max=30)
      */
     private $adresse;
 
@@ -64,6 +65,7 @@ class Enseignant
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Assert\Length(min=4, max=30)
      */
     private $CV;
 
@@ -79,6 +81,7 @@ class Enseignant
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min=8, max=30)
      */
     private $motpasse;
 
