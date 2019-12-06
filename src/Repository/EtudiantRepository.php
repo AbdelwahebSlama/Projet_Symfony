@@ -35,6 +35,18 @@ class EtudiantRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function findEtudiantByEmail($email, $password)
+    {
+        $query = $this->_em->createQuery(
+            'SELECT e
+FROM App\Entity\Etudiant e
+WHERE e.email = :em AND e.motpasse = :pass
+'
+        )
+            ->setParameter('em', $email)
+            ->setParameter('pass', $password);
+        return $query->execute();
+    }
 
     /*
     public function findOneBySomeField($value): ?Etudiant

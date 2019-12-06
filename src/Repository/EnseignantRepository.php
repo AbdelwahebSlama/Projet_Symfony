@@ -19,6 +19,18 @@ class EnseignantRepository extends ServiceEntityRepository
         parent::__construct($registry, Enseignant::class);
     }
 
+    public function findEnseignantByEmail($email, $password)
+    {
+        $query = $this->_em->createQuery(
+            'SELECT e
+FROM App\Entity\Enseignant e
+WHERE e.email = :em And e.motpasse = :pasword
+'
+        )
+            ->setParameter('em', $email)
+            ->setParameter('pasword', $password);
+        return $query->execute();
+    }
     // /**
     //  * @return Enseignant[] Returns an array of Enseignant objects
     //  */
