@@ -3,11 +3,22 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AdminRepository")
+ * @UniqueEntity(
+ *     fields={"email"},
+ *     message="L'email est déjà utilisé"
+ * )
+ * @UniqueEntity(
+ *     fields={"cin"},
+ *     message="Le numéro de cin est déjà utilisé"
+ * )
  */
-class Admin
+class Admin implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -38,6 +49,7 @@ class Admin
 
     /**
      * @ORM\Column(type="string", length=50, nullable=true)
+     * @Assert\Email()
      */
     private $email;
 
@@ -53,8 +65,15 @@ class Admin
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min="8", minMessage="Votre mot de passe doit contenir au moin 8 caracter")
+     * @Assert\EqualTo(propertyPath="confirm_password", message="Vous n'avez pas tapé le mème mot de passe")
      */
     private $motpasse;
+
+    /*
+     * @Assert\EqualTo(propertyPath="motpasse", message="Vous n'avez pas tapé le mème mot de passe")
+     */
+    public $confirm_password;
 
     public function getId(): ?int
     {
@@ -155,5 +174,32 @@ class Admin
         $this->motpasse = $motpasse;
 
         return $this;
+    }
+
+    public function eraseCredentials()
+    {
+    }
+
+    public function getRoles()
+    {
+        return ['ROLE_USER'];
+        // TODO: Implement getRoles() method.
+    }
+
+    public function getPassword()
+    {
+        return $this->motpasse;
+        // TODO: Implement getPassword() method.
+    }
+
+    public function getSalt()
+    {
+        // TODO: Implement getSalt() method.
+    }
+
+    public function getUsername()
+    {
+        return $this->nom;
+        // TODO: Implement getUsername() method.
     }
 }

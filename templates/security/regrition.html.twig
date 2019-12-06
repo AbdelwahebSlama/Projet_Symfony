@@ -1,0 +1,21 @@
+{% extends 'security/login.html.twig' %}
+{% block title %} Inscription {% endblock %}
+
+{% block body %}
+
+    {{ form_start(form) }}
+    {{ form_row(form.cin, {'label': 'CIN', 'attr': {'placeholder': 'Entrer le numero cin'}} ) }}
+    {{ form_row(form.nom, {'label': 'Nom', 'attr': {'placeholder': 'Entrer votre nom' }} ) }}
+    {{ form_row(form.prenom, {'label': 'Prenom', 'attr': {'placeholder': 'Entrer votre prenom'}} ) }}
+    {{ form_row(form.email, {'label': 'Email', 'attr': {'placeholder': 'Entrer votre email'}} ) }}
+    {{ form_row(form.adresse, {'label': 'Addresse', 'attr': {'placeholder': 'Entrer votre adresse'}} ) }}
+    {{ form_row(form.image, {'label': 'Image', 'attr': {'placeholder': 'Entrer image'}} ) }}
+    {{ form_row(form.post ,{'label': 'post', 'attr': {'placeholder': 'Entrer votre post'}} ) }}
+    {{ form_row(form.motpasse, {'label': 'mot de passe', 'attr': {'placeholder': 'Entrer votre password'}} ) }}
+    {{ form_row(form.confirm_password , {'label': 'mot de passe', 'attr': {'placeholder': 'Entrer votre password'}}) }}
+    <button type="submit" class="btn btn-primary btn-block"> Inscription</button>
+
+    {{ form_end(form) }}
+
+
+{% endblock %}

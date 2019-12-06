@@ -20,7 +20,7 @@ class AdminController extends AbstractController
     public function index()
     {
         $manager = $this->getDoctrine()->getManager();
-        $admin = $manager->getRepository(Admin::class)->find(2);
+        $admin = $manager->getRepository(Admin::class)->find(7);
 
         return $this->render('admin/indexadmin.html.twig', [
             "admin" => $admin
