@@ -7,7 +7,6 @@ use App\Entity\Enseignant;
 use App\Entity\Etudiant;
 use App\Form\EnseignantType;
 use App\Form\EtudiantType;
-use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -20,7 +19,7 @@ class AdminController extends AbstractController
     public function index()
     {
         $manager = $this->getDoctrine()->getManager();
-        $admin = $manager->getRepository(Admin::class)->find(7);
+        $admin = $manager->getRepository(Admin::class)->find(12);
 
         return $this->render('admin/indexadmin.html.twig', [
             "admin" => $admin
@@ -74,7 +73,7 @@ class AdminController extends AbstractController
      * @Route("/admin/ajoutEnsg", name="adminAjoutEnsg")
      * @Route("/admin/{id}/ModifEns", name="adminModifiEnsg")
      */
-    public function ajouterEnseignant(Enseignant $enseignant = null, Request $request, ObjectManager $manager)
+    public function ajouterEnseignant(Enseignant $enseignant = null, Request $request)
     {
         if (!$enseignant) {
             $enseignant = new Enseignant();
@@ -83,6 +82,18 @@ class AdminController extends AbstractController
         $form = $this->createForm(EnseignantType::class, $enseignant);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $file = $enseignant->getCV();
+            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+            $file->move($this->getParameter('upload_directory'), $fileName);
+            $enseignant->setCV($fileName);
+
+            $file1 = $enseignant->getImage();
+            $fileName1 = md5(uniqid()) . '.' . $file1->guessExtension();
+            $file1->move($this->getParameter('upload_directory3'), $fileName1);
+            $enseignant->setImage($fileName1);
+
+            $manager = $this->getDoctrine()->getManager();
             $manager->persist($enseignant);
             $manager->flush();
             return $this->redirectToRoute('enseignant.detail', ['id' =>
@@ -139,7 +150,7 @@ class AdminController extends AbstractController
      * @Route("/admin/ajoutEtud", name="adminAjoutEtud")
      * @Route("/admin/{id}/ModifEtud", name="adminModifiEtud")
      */
-    public function ajouterEtudiant(Etudiant $etudiant = null, Request $request, ObjectManager $manager)
+    public function ajouterEtudiant(Etudiant $etudiant = null, Request $request)
     {
 
         if (!$etudiant) {
@@ -149,6 +160,12 @@ class AdminController extends AbstractController
         $form = $this->createForm(EtudiantType::class, $etudiant);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $file = $etudiant->getImage();
+            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+            $file->move($this->getParameter('upload_directory2'), $fileName);
+            $etudiant->setImage($fileName);
+
+            $manager = $this->getDoctrine()->getManager();
             $manager->persist($etudiant);
             $manager->flush();
 

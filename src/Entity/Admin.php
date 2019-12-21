@@ -8,6 +8,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
+ *
  * @ORM\Entity(repositoryClass="App\Repository\AdminRepository")
  * @UniqueEntity(
  *     fields={"email"},
@@ -18,7 +19,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *     message="Le numéro de cin est déjà utilisé"
  * )
  */
-class Admin implements UserInterface
+class Admin implements UserInterface, \Serializable
 {
     /**
      * @ORM\Id()
@@ -64,7 +65,7 @@ class Admin implements UserInterface
     private $post;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @Assert\Length(min="8", minMessage="Votre mot de passe doit contenir au moin 8 caracter")
      * @Assert\EqualTo(propertyPath="confirm_password", message="Vous n'avez pas tapé le mème mot de passe")
      */
@@ -74,6 +75,8 @@ class Admin implements UserInterface
      * @Assert\EqualTo(propertyPath="motpasse", message="Vous n'avez pas tapé le mème mot de passe")
      */
     public $confirm_password;
+
+    private $roles = [];
 
     public function getId(): ?int
     {
@@ -180,11 +183,11 @@ class Admin implements UserInterface
     {
     }
 
-    public function getRoles()
-    {
-        return ['ROLE_USER'];
-        // TODO: Implement getRoles() method.
-    }
+//    public function getRoles()
+//    {
+//        return ['ROLE_USER'];
+//        // TODO: Implement getRoles() method.
+//    }
 
     public function getPassword()
     {
@@ -202,4 +205,50 @@ class Admin implements UserInterface
         return $this->nom;
         // TODO: Implement getUsername() method.
     }
+
+    public function serialize()
+    {
+        return Serialize([
+            $this->id,
+            $this->nom,
+            $this->prenom,
+            $this->email,
+            $this->adresse,
+            $this->motpasse,
+            $this->image,
+            $this->post
+
+        ]);
+    }
+
+    public function unserialize($string)
+    {
+        list(
+            $this->id,
+            $this->nom,
+            $this->prenom,
+            $this->email,
+            $this->adresse,
+            $this->motpasse,
+            $this->image,
+            $this->post
+
+            ) = $this->unserialize($string, ['allowed_classes' => false]);
+
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getRoles(): array
+    {
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
+
+
 }

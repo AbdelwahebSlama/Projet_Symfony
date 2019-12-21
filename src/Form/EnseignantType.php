@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Enseignant;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -17,9 +18,16 @@ class EnseignantType extends AbstractType
             ->add('prenom')
             ->add('adresse')
             ->add('email')
-            ->add('image')
+            ->add('image', FileType::class, array(
+                'label' => 'Choissiez votre image type JPG ',
+                'data_class' => null,))
             ->add('specialite')
-            ->add('CV')
+            ->add('CV', FileType::class, array(
+                'label' => 'Choissiez votre fichier ',
+                'data_class' => null,
+
+            ))
+            ->add('motpasse')
             ->add('Ecole');
     }
 

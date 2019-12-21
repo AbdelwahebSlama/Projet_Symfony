@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
+
 /**
  * @ORM\Entity(repositoryClass="App\Repository\EtudiantRepository")
  */
@@ -26,7 +27,7 @@ class Etudiant
 
     /**
      * @ORM\Column(type="string", length=30)
-     * @Assert\Length(min=4, max=30)
+     * @Assert\Length(min=3, max=30)
      */
     private $nom;
 
@@ -38,7 +39,7 @@ class Etudiant
 
     /**
      * @ORM\Column(type="string", length=50)
-     * @Assert\Length(min=4, max=30)
+     * @Assert\Length(min=3)
      */
     private $adresse;
 
@@ -49,11 +50,10 @@ class Etudiant
 
     /**
      * @ORM\Column(type="text", nullable=true)
-     * * @Assert\Email(
-     *     message = "The email '{{ value }}' is not a valid email."
-     * )
+     *
      */
     private $image;
+
 
     /**
      * @ORM\Column(type="integer")
@@ -77,7 +77,7 @@ class Etudiant
     private $Stage;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $motpasse;
 
@@ -146,12 +146,12 @@ class Etudiant
         return $this;
     }
 
-    public function getImage(): ?string
+    public function getImage()
     {
         return $this->image;
     }
 
-    public function setImage(?string $image): self
+    public function setImage($image)
     {
         $this->image = $image;
 

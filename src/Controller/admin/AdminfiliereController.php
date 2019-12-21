@@ -8,7 +8,6 @@ use App\Entity\Type;
 use App\Form\FiliereType;
 use App\Form\NiveauType;
 use App\Form\TypeForm;
-use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -34,7 +33,7 @@ class AdminfiliereController extends AbstractController
      * @Route("/admin/AjouterFiliere", name="admin.filiere.ajout")
      * @Route("/admin/{id}/ModiFiliere", name="admin.modif.fileiere")
      */
-    public function AjoutModifStage(Filiere $filiere = null, ObjectManager $manager, Request $request)
+    public function AjoutModifStage(Filiere $filiere = null, Request $request)
     {
         if (!$filiere) {
             $filiere = new Filiere();
@@ -44,6 +43,7 @@ class AdminfiliereController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $manager = $this->getDoctrine()->getManager();
             $manager->persist($filiere);
             $manager->flush();
             return $this->redirectToRoute("admin.liste.filiere");
@@ -75,7 +75,7 @@ class AdminfiliereController extends AbstractController
      * @Route("admin/{id}/modifType" , name="admin.modif.type")
      */
 
-    public function Ajout_Modif_Type(Type $type = null, Request $request, ObjectManager $manager)
+    public function Ajout_Modif_Type(Type $type = null, Request $request)
     {
         if (!$type) {
             $type = new Type();
@@ -84,6 +84,7 @@ class AdminfiliereController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $manager = $this->getDoctrine()->getManager();
             $manager->persist($type);
             $manager->flush();
             return $this->redirectToRoute("admin.type.liste");
@@ -117,7 +118,7 @@ class AdminfiliereController extends AbstractController
      * @Route("admin/{id}/modifNiveau" , name="admin.modif.niveau")
      */
 
-    public function Ajout_Modif_Niveau(Niveau $niveau = null, Request $request, ObjectManager $manager)
+    public function Ajout_Modif_Niveau(Niveau $niveau = null, Request $request)
     {
         if (!$niveau) {
             $niveau = new Niveau();
@@ -126,6 +127,7 @@ class AdminfiliereController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $manager = $this->getDoctrine()->getManager();
             $manager->persist($niveau);
             $manager->flush();
             return $this->redirectToRoute("admin.liste.niveau");

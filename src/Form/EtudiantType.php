@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Etudiant;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -17,8 +18,11 @@ class EtudiantType extends AbstractType
             ->add('prenom')
             ->add('adresse')
             ->add('email')
-            ->add('image')
+            ->add('image', FileType::class, array(
+                'label' => 'Choissiez votre fichier ',
+                'data_class' => null))
             ->add('age')
+            ->add('motpasse')
             ->add('Ecole')
             ->add('Classe')
             ->add('Stage');

@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\File;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -54,7 +55,7 @@ class Enseignant
 
     /**
      * @ORM\Column(type="text", nullable=true)
-     * @Assert\Url()
+     * @Assert\File(mimeTypes={ "image/*" })
      */
     private $image;
 
@@ -70,6 +71,13 @@ class Enseignant
     private $CV;
 
     /**
+     * @var File
+     *
+     * @UploadableField(name="CV", path="uploads/tutoriels")
+     *
+     */
+
+    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Ecole", inversedBy="Enseignant")
      */
     private $Ecole;
@@ -80,7 +88,7 @@ class Enseignant
     private $Stage;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @Assert\Length(min=8, max=30)
      */
     private $motpasse;
@@ -155,12 +163,12 @@ class Enseignant
         return $this;
     }
 
-    public function getImage(): ?string
+    public function getImage()
     {
         return $this->image;
     }
 
-    public function setImage(?string $image): self
+    public function setImage($image)
     {
         $this->image = $image;
 
@@ -179,12 +187,12 @@ class Enseignant
         return $this;
     }
 
-    public function getCV(): ?string
+    public function getCV()
     {
         return $this->CV;
     }
 
-    public function setCV(?string $CV): self
+    public function setCV($CV)
     {
         $this->CV = $CV;
 

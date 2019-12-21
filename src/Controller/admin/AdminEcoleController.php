@@ -7,7 +7,6 @@ use App\Entity\Stage;
 use App\Form\ClasseType;
 use App\Form\EcoleType;
 use App\Form\StageType;
-use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -38,7 +37,7 @@ class AdminEcoleController extends AbstractController
      * @Route("/admin/AjouterClasse", name="admin.classe.ajout")
      * @Route("/admin/{id}/ModifClasse", name="admin.modif.classe")
      */
-    public function AjoutModifClasse(Classe $classe = null, ObjectManager $manager, Request $request)
+    public function AjoutModifClasse(Classe $classe = null, Request $request)
     {
         if (!$classe) {
             $classe = new Classe();
@@ -46,6 +45,7 @@ class AdminEcoleController extends AbstractController
         $form = $this->createForm(ClasseType::class, $classe);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $manager = $this->getDoctrine()->getManager();
             $manager->persist($classe);
             $manager->flush();
             return $this->redirectToRoute("admin.liste.classe");
@@ -70,7 +70,7 @@ class AdminEcoleController extends AbstractController
      * @Route("/admin/AjouterStage", name="admin.stage.ajout")
      * @Route("/admin/{id}/ModifStage", name="admin.modif.stage")
      */
-    public function AjoutModifStage(Stage $stage = null, ObjectManager $manager, Request $request)
+    public function AjoutModifStage(Stage $stage = null, Request $request)
     {
         if (!$stage) {
             $stage = new Stage();
@@ -78,6 +78,7 @@ class AdminEcoleController extends AbstractController
         $form = $this->createForm(StageType::class, $stage);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $manager = $this->getDoctrine()->getManager();
             $manager->persist($stage);
             $manager->flush();
             return $this->redirectToRoute("admin.liste.stage");
@@ -104,7 +105,7 @@ class AdminEcoleController extends AbstractController
      * @Route("/admin/AjouterEcole", name="admin.ajout.ecole")
      * @Route("/admin/{id}/ModifStage", name="admin.modif.stage")
      */
-    public function AjoutEcole(ObjectManager $manager, Request $request)
+    public function AjoutEcole(Request $request)
     {
 
 
@@ -112,7 +113,7 @@ class AdminEcoleController extends AbstractController
         $form = $this->createForm(EcoleType::class, $ecole);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-
+            $manager = $this->getDoctrine()->getManager();
             $manager->persist($ecole);
             $manager->flush();
             return $this->redirectToRoute("admin.ecole");
