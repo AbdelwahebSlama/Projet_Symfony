@@ -57,7 +57,8 @@
            aria-expanded="false" aria-controls="navbar"><i></i></a>
         <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
             <div class="text-center">
-                <div class="author-img" style="background-image: url({{ etud.image }});"></div>
+                <div class="author-img"
+                     style="background-image: url({{ asset('images/etudiants/')~etud.image }});"></div>
                 <h1 id="colorlib-logo"><a href="{{ path('etudiant') }}">{{ etud.nom }} {{ etud.prenom }}</a></h1>
                 <span class="position">etudiant</span>
             </div>
