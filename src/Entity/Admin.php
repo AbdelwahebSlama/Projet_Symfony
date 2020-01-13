@@ -48,11 +48,6 @@ class Admin implements UserInterface, \Serializable
      */
     private $adresse;
 
-    /**
-     * @ORM\Column(type="string", length=50, nullable=true)
-     * @Assert\Email()
-     */
-    private $email;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -64,19 +59,22 @@ class Admin implements UserInterface, \Serializable
      */
     private $post;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Length(min="8", minMessage="Votre mot de passe doit contenir au moin 8 caracter")
-     * @Assert\EqualTo(propertyPath="confirm_password", message="Vous n'avez pas tapé le mème mot de passe")
-     */
-    private $motpasse;
 
-    /*
-     * @Assert\EqualTo(propertyPath="motpasse", message="Vous n'avez pas tapé le mème mot de passe")
+    /**
+     * @ORM\Column(type="string", length=180, unique=true)
+     * * @Assert\Email(
+     *     message = "The email '{{ value }}' is not a valid email."
+     * )
      */
-    public $confirm_password;
+    private $email;
+    /**
+     * @var string The hashed password
+     * @ORM\Column(type="string")
+     */
+    private $password;
 
     private $roles = [];
+
 
     public function getId(): ?int
     {
@@ -142,7 +140,6 @@ class Admin implements UserInterface, \Serializable
 
         return $this;
     }
-
     public function getImage(): ?string
     {
         return $this->image;
@@ -167,74 +164,24 @@ class Admin implements UserInterface, \Serializable
         return $this;
     }
 
-    public function getMotpasse(): ?string
+    public function getUser(): ?User
     {
-        return $this->motpasse;
+        return $this->User;
     }
 
-    public function setMotpasse(string $motpasse): self
+    public function setUser(?User $User): self
     {
-        $this->motpasse = $motpasse;
+        $this->User = $User;
 
         return $this;
     }
 
-    public function eraseCredentials()
+
+    public function setPassword(string $password): self
     {
-    }
+        $this->password = $password;
 
-//    public function getRoles()
-//    {
-//        return ['ROLE_USER'];
-//        // TODO: Implement getRoles() method.
-//    }
-
-    public function getPassword()
-    {
-        return $this->motpasse;
-        // TODO: Implement getPassword() method.
-    }
-
-    public function getSalt()
-    {
-        // TODO: Implement getSalt() method.
-    }
-
-    public function getUsername()
-    {
-        return $this->nom;
-        // TODO: Implement getUsername() method.
-    }
-
-    public function serialize()
-    {
-        return Serialize([
-            $this->id,
-            $this->nom,
-            $this->prenom,
-            $this->email,
-            $this->adresse,
-            $this->motpasse,
-            $this->image,
-            $this->post
-
-        ]);
-    }
-
-    public function unserialize($string)
-    {
-        list(
-            $this->id,
-            $this->nom,
-            $this->prenom,
-            $this->email,
-            $this->adresse,
-            $this->motpasse,
-            $this->image,
-            $this->post
-
-            ) = $this->unserialize($string, ['allowed_classes' => false]);
-
+        return $this;
     }
 
     /**
@@ -242,13 +189,81 @@ class Admin implements UserInterface, \Serializable
      */
     public function getRoles(): array
     {
-        $roles = $this->roles;
+//        $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+//        $roles[] = 'ROLE_ADMIN';
 
-        return array_unique($roles);
+        return ['ROLE_ADMIN'];
     }
 
+//    public function setRoles(array $roles): self
+//    {
+//        $this->roles = $roles;
+//
+//        return $this;
+//    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getPassword(): string
+    {
+        return (string)$this->password;
+    }
+
+
+    /**
+     * @see UserInterface
+     */
+    public function getSalt()
+    {
+        return null;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials()
+    {
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
+    }
+
+
+    public function serialize()
+    {
+        return serialize([
+            $this->id,
+            $this->email,
+            $this->password
+        ]);
+        // TODO: Implement serialize() method.
+    }
+
+    public function unserialize($serialized)
+    {
+        list(
+            $this->id,
+            $this->email,
+            $this->password
+            ) = unserialize($serialized, ['allowed_classes' => false]);
+        // TODO: Implement unserialize() method.
+    }
+    /**
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
+     */
+    public function getUsername(): string
+    {
+        return (string)$this->email;
+    }
+
+    public function __toString()
+    {
+        return (string)$this->nom;
+        // TODO: Implement __toString() method.
+    }
 
 
 }

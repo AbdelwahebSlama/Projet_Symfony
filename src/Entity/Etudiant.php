@@ -3,13 +3,14 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\EtudiantRepository")
  */
-class Etudiant
+class Etudiant implements UserInterface, \Serializable
 {
     /**
      * @ORM\Id()
@@ -77,9 +78,10 @@ class Etudiant
     private $Stage;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string The hashed password
+     * @ORM\Column(type="string")
      */
-    private $motpasse;
+    private $password;
 
     public function getId(): ?int
     {
@@ -208,19 +210,81 @@ class Etudiant
 
     public function __toString()
     {
-        return $this->nom;
+        return (string)$this->nom;
         // TODO: Implement __toString() method.
     }
 
-    public function getMotpasse(): ?string
-    {
-        return $this->motpasse;
-    }
 
-    public function setMotpasse(string $motpasse): self
+    public function setPassword(string $password): self
     {
-        $this->motpasse = $motpasse;
+        $this->password = $password;
 
         return $this;
     }
+
+    /**
+     * @see UserInterface
+     */
+    public function getRoles(): array
+    {
+        return ['ROLE_ETUDIANT'];
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getPassword(): string
+    {
+        return (string)$this->password;
+    }
+
+
+    /**
+     * @see UserInterface
+     */
+    public function getSalt()
+    {
+        return null;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials()
+    {
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
+    }
+
+
+    public function serialize()
+    {
+        return serialize([
+            $this->id,
+            $this->email,
+            $this->password
+        ]);
+        // TODO: Implement serialize() method.
+    }
+
+    public function unserialize($serialized)
+    {
+        list(
+            $this->id,
+            $this->email,
+            $this->password
+            ) = unserialize($serialized, ['allowed_classes' => false]);
+        // TODO: Implement unserialize() method.
+    }
+
+    /**
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
+     */
+    public function getUsername(): string
+    {
+        return (string)$this->email;
+    }
+
 }

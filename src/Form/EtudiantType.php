@@ -22,7 +22,7 @@ class EtudiantType extends AbstractType
                 'label' => 'Choissiez votre fichier ',
                 'data_class' => null))
             ->add('age')
-            ->add('motpasse')
+            ->add('password')
             ->add('Ecole')
             ->add('Classe')
             ->add('Stage');

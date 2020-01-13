@@ -13,25 +13,23 @@ class EtudiantController extends AbstractController
      */
     public function index()
     {
-        $manager = $this->getDoctrine()->getManager();
-        $etud = $manager->getRepository(Etudiant::class)->find(761);
-
+        $user = $this->getUser();
         return $this->render('etudiant/profile_etudiant.html.twig', [
-            "etud" => $etud
+            "etud" => $user,
+
 
         ]);
     }
 
     /**
-     * @Route("/etudiant/coordonne", name="etudiant.coordonnee")
+     * @Route("/etudiant/coordonne/{id<\d+>}", name="etudiant.coordonnee")
      */
-    public function Affiche_Cordonne()
+    public function Affiche_Cordonne(Etudiant $etudiant = null)
     {
-        $manager = $this->getDoctrine()->getManager();
-        $etud = $manager->getRepository(Etudiant::class)->find(761);
+
 
         return $this->render('etudiant/coordonnées.html.twig', [
-            "etud" => $etud
+            "etud" => $etudiant
 
         ]);
     }

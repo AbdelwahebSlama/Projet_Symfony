@@ -1,5 +1,5 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+  path: /
+  controller: App\Controller\security\SecutityController:login
 logout:
     path: /logout

@@ -27,7 +27,7 @@ class EnseignantType extends AbstractType
                 'data_class' => null,
 
             ))
-            ->add('motpasse')
+            ->add('password')
             ->add('Ecole');
     }
 

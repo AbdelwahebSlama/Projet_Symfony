@@ -14,6 +14,7 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class TypeRepository extends ServiceEntityRepository
 {
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Type::class);
@@ -47,4 +48,9 @@ class TypeRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function cc()
+    {
+        return null;
+    }
 }

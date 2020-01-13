@@ -2,7 +2,6 @@
 
 namespace App\Controller\admin;
 
-use App\Entity\Admin;
 use App\Entity\Enseignant;
 use App\Entity\Etudiant;
 use App\Form\EnseignantType;
@@ -18,9 +17,7 @@ class AdminController extends AbstractController
      */
     public function index()
     {
-        $manager = $this->getDoctrine()->getManager();
-        $admin = $manager->getRepository(Admin::class)->find(12);
-
+        $admin = $this->getUser();
         return $this->render('admin/indexadmin.html.twig', [
             "admin" => $admin
 

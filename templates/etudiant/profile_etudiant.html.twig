@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ etud.nom }} {{ etud.prenom }}</title>
+    <title>{{ etud }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
@@ -51,30 +51,34 @@
 
 </head>
 <body>
+
+
 <div id="colorlib-page">
     <div class="container-wrap">
         <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar"
            aria-expanded="false" aria-controls="navbar"><i></i></a>
         <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
             <div class="text-center">
-                <div class="author-img" style="background-image: url({{ etud.image }});"></div>
-                <h1 id="colorlib-logo"><a href="{{ path('etudiant.coordonnee') }}">{{ etud.nom }} {{ etud.prenom }}</a>
+                <div class="author-img"
+                     style="background-image: url({{ asset('images/etudiants/')~etud.image }});"></div>
+                <h1 id="colorlib-logo"><a
+                            href="{{ path('etudiant.coordonnee', {id: etud.id}) }}">{{ etud.nom }} {{ etud.prenom }}</a>
                 </h1>
                 <span class="position">etudiant</span>
             </div>
             <nav id="colorlib-main-menu" role="navigation" class="navbar">
                 <div id="navbar" class="collapse">
                     <ul>
-                        <li class="active"><a href="{{ path('etudiant.coordonnee') }}" data-nav-section="home">Home</a>
-                        </li>
+                        <li class="active"><a href="{{ path('etudiant.coordonnee', {id: etud.id} ) }}">Home</a></li>
 
                         <div class="btn-group">
                             <li class="btn">my profile</li>
                             <li class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></li>
                             <ul class="dropdown-menu">
-                                <li><h1 id="colorlib-logo"><a href="{{ path('etudiant.coordonnee') }}"></a></h1></li>
-                                <li><a href="#"><i class="icon-screenshot">slama</i>password</a></li>
-                                <li><a href="{{ path('security_lougout') }}"><i class="icon-screenshot"></i>log out</a>
+                                <li><h1 id="colorlib-logo"><a
+                                                href="{{ path('etudiant.coordonnee', {id: etud.id}) }}"> </a></h1></li>
+                                <li><a href="#">password</a></li>
+                                <li><a href="www.google.com"><i class="icon-screenshot"></i>logout</a>
                                 </li>
 
                             </ul>
@@ -92,7 +96,7 @@
                             </ul>
                         </div>
 
-                        <li><a href="#" data-nav-section="skills">news</a></li>
+                        <li><a href="{{ path('security_lougout') }}" data-nav-section="skills">news</a></li>
 
                         <li><a href="#" data-nav-section="work">About</a></li>
 
@@ -146,6 +150,7 @@
 
                 </section>
             </div>
+
         {% endblock %}
 
 
@@ -168,6 +173,7 @@
 
             <!-- MAIN JS -->
         <script src="{{ asset('js/main.js') }}"></script>
+
 
 </body>
 </html>

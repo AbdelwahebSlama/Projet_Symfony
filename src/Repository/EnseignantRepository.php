@@ -4,7 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Enseignant;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Common\Persistence\ManagerRegistry;
 
 /**
  * @method Enseignant|null find($id, $lockMode = null, $lockVersion = null)
@@ -19,44 +19,18 @@ class EnseignantRepository extends ServiceEntityRepository
         parent::__construct($registry, Enseignant::class);
     }
 
-    public function findEnseignantByEmail($email, $password)
+
+    public function findEnseignantByEmail($email)
     {
         $query = $this->_em->createQuery(
             'SELECT e
 FROM App\Entity\Enseignant e
-WHERE e.email = :em And e.motpasse = :pasword
+WHERE e.email = :em 
 '
         )
-            ->setParameter('em', $email)
-            ->setParameter('pasword', $password);
+            ->setParameter('em', $email);
         return $query->execute();
     }
-    // /**
-    //  * @return Enseignant[] Returns an array of Enseignant objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('e')
-            ->andWhere('e.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('e.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Enseignant
-    {
-        return $this->createQueryBuilder('e')
-            ->andWhere('e.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
+
 }

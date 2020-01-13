@@ -58,7 +58,7 @@
         <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
             <div class="text-center">
                 <div class="author-img" style="background-image: url({{ etud.image }});"></div>
-                <h1 id="colorlib-logo"><a href="index.html">{{ etud.nom }} {{ etud.prenom }}</a></h1>
+                <h1 id="colorlib-logo"><a href="{{ path('etudiant') }}">{{ etud.nom }} {{ etud.prenom }}</a></h1>
                 <span class="position">etudiant</span>
             </div>
             <nav id="colorlib-main-menu" role="navigation" class="navbar">
@@ -70,7 +70,7 @@
                             <li class="btn">my profile</li>
                             <li class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></li>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ path('etudiant.coordonnee') }}"><i
+                                <li><a href="{{ path('etudiant') }}"><i
                                                 class="icon-screenshot"></i>donnees</a></li>
                                 <li><a href="#"><i class="icon-screenshot"></i>password</a></li>
                                 <li><a href="#"><i class="icon-screenshot"></i>log out</a></li>

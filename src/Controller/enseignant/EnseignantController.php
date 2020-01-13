@@ -2,18 +2,24 @@
 
 namespace App\Controller\enseignant;
 
+use App\Entity\Enseignant;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * @IsGranted("ROLE_ENSEIGNANT")
+ */
 class EnseignantController extends AbstractController
 {
     /**
-     * @Route("/enseignant", name="enseignant")
+     * @Route("/enseignant/{id}", name="enseignant")
      */
-    public function index()
+    public function index(Enseignant $enseignant = null)
     {
+        $manager = $this->getDoctrine()->getRepository(Enseignant::class);
         return $this->render('enseignant/index.html.twig', [
-            'controller_name' => 'EnseignantController',
+            'ensg' => $enseignant
         ]);
     }
 }

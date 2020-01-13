@@ -1,8 +1,16 @@
 security:
-    encoders:
-      App\Entity\User:
-        algorithm: bcrypt
-        cost: 12
+  role_hierarchy:
+    ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+    ROLE_ETUDIANT: [ROLE_ETUDIANT]
+    ROLE_ENSEIGNANT: [ROLE_ENSEIGNANT]
+
+  encoders:
+    App\Entity\User:
+      algorithm: bcrypt
+      cost: 12
+    App\Entity\Enseignant: plaintext
+    App\Entity\Admin: plaintext
+    App\Entity\Etudiant: plaintext
 
   #        App\Entity\Admin:
   #            algorithm: bcrypt
@@ -11,58 +19,65 @@ security:
 
 
   # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
-    providers:
-      from_database:
-        entity:
-          class: App\Entity\User
-          property: email
-  #        users:
-  #          entity:
-  #            class: 'App\Entity\User'
-  #            property: email
-  #
-  #        in_database:
-  #           entity:
-  #              class: App\Entity\Admin
-  #              property: email
-  #        # used to reload user from session & other features (e.g. switch_user)
-  #        app_user_provider:
-  #            entity:
-  #                class: App\Entity\User
-  #                property: email
-    firewalls:
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
-        main:
-            anonymous: true
+  providers:
+    from_database:
+      entity:
+        class: App\Entity\User
+        property: email
+    from_Ensg:
+      entity:
+        class: App\Entity\Enseignant
+        property: email
+    from_Admin:
+      entity:
+        class: App\Entity\Admin
+        property: email
+    from_Etud:
+      entity:
+        class: App\Entity\Etudiant
+        property: email
+    all_user:
+      chain:
+        providers: ['from_Ensg', 'from_database', 'from_Admin', 'from_Etud']
 
-            form_login:
-              check_path: security_login
-          #                login_path: security_login
-          #
-          #               provider: in_database
-          #
-            logout:
-              path: security_lougout
-              target: /connexion
 
-          #            http_basic: true
+  firewalls:
+    dev:
+      pattern: ^/(_(profiler|wdt)|css|images|js)/
+      security: false
+    main:
+      anonymous: true
+      provider: all_user
+      pattern: ^/
+      form_login:
+        provider: all_user
+        check_path: security_login
+        use_forward: false
+        always_use_default_target_path: false
+        default_target_path: /login_user
 
-            # activate different ways to authenticate
-            # https://symfony.com/doc/current/security.html#firewalls-authentication
+      logout:
+        path: security_lougout
+        target: /login
 
-            # https://symfony.com/doc/current/security/impersonating_user.html
-            # switch_user: true
+      #            http_basic: true
 
-    # Easy way to control access for large sections of your site
-    # Note: Only the *first* access control that matches will be used
-    access_control:
-      - { path: ^/admin, roles: ROLE_ADMIN}
+      # activate different ways to authenticate
+      # https://symfony.com/doc/current/security.html#firewalls-authentication
 
+      # https://symfony.com/doc/current/security/impersonating_user.html
+      # switch_user: true
+
+  # Easy way to control access for large sections of your site
+  # Note: Only the *first* access control that matches will be used
+  access_control:
+    - { path: ^/admin, roles: ROLE_ADMIN}
+    - { path: ^/enseignant, roles:  ROLE_ENSEIGNANT }
+    - { path: ^/etudiant, roles:  ROLE_ETUDIANT }
+    - { path: ^/api/login, roles: [ IS_AUTHENTICATED_ANONYMOUSLY ] }
+    - { path: ^/login, roles: [IS_AUTHENTICATED_ANONYMOUSLY]  }
+    -
 #      - { path: ^/api/login, roles: [ IS_AUTHENTICATED_ANONYMOUSLY ] }
 #      - { path: ^/connexion, roles: [IS_AUTHENTICATED_ANONYMOUSLY]  }
 #      - { path: ^/admin, roles:  ROLE_ADMIN }
 #      - { path: ^/, roles: ROLE_USER }
-
-
